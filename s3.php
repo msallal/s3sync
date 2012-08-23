@@ -100,7 +100,7 @@ class S3sync
 
         if(!$this->isDryRun)
         {
-            $response = $this->_s3->create_object($this->_bucketName, $fileHash, $options);
+            $response = $this->_s3->create_object($this->_bucketName, $fullPath, $options);
 
             if( $response->isOK() )
                 $this->_filesUploaded++;
